@@ -27,7 +27,14 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDo" id="GE4-0i-knW"/>
+                    <navigationItem key="navigationItem" title="ToDo" id="GE4-0i-knW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qkm-CB-dIm">
+                            <color key="tintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="vzp-4T-UW6" id="EJL-nf-pxo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="toDoTableView" destination="yS2-4Q-SAl" id="dAo-qs-ibr"/>
                     </connections>
