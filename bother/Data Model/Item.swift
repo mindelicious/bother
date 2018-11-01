@@ -13,9 +13,4 @@ class Item {
     var title : String = ""
     var done : Bool = false
     
-//    init(toDoItemt: String, isDone: Bool) {
-//        title = toDoItemt
-//        done = isDone
-//    }
-    
 }
