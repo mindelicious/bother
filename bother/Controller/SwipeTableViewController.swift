@@ -11,19 +11,20 @@ import SwipeCellKit
 
 class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
 
+    var cell: UITableViewCell?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     
     }
-// TableView DataSource Method
+    // TableView DataSource Methods
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
         
-        cell.textLabel?.text = categories?[indexPath.row].name ?? "No categories added yet:)"
-        
-        
+        cell.delegate = self
         
         return cell
     }
@@ -51,6 +52,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     }
 
     func updatePath(at indexPath: IndexPath) {
-        
+        //Update our data model
     }
 }
